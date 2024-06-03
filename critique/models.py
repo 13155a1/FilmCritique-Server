@@ -1,6 +1,6 @@
 from django.db import models
 
-class Critique(models.Model):
+class Review(models.Model):
     title = models.CharField(max_length=200)
     review = models.TextField()
     date_watched = models.DateField()

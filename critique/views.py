@@ -1,8 +1,8 @@
 from django.shortcuts import render
-from .serializers import CritiqueSerializer
+from .serializers import ReviewSerializer
 from rest_framework.viewsets import ModelViewSet
-from .models import Critique
+from .models import Review
 
-class CritiqueViewset(ModelViewSet):
-    queryset = Critique.objects.all()
-    serializer_class = CritiqueSerializer
+class ReviewViewset(ModelViewSet):
+    queryset = Review.objects.all()
+    serializer_class = ReviewSerializer
