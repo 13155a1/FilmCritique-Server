@@ -9,7 +9,7 @@ class ReviewViewset(ModelViewSet):
     queryset = Review.objects.all()
     serializer_class = ReviewSerializer
 
-@api_view(['GET'])
+@api_view(['POST'])
 def validate_password(request, pk):
     review = get_object_or_404(Review, pk=pk)
 
