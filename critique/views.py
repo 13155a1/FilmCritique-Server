@@ -13,7 +13,7 @@ class ReviewViewset(ModelViewSet):
 def validate_password(request, pk):
     review = get_object_or_404(Review, pk=pk)
 
-    password = request.POST['password']
+    password = request.data['password']
 
     if password == review.password:
         return Response({"password": True})
